@@ -20,4 +20,5 @@ CODE strcuture explained for the developer.
 4. HTML and CSS for styling.
 
 
-![Alt text](/screenshots/screenshot1.png?raw=true "Optional Title")
+![Alt text](/screenshots/screenshot1.png?raw=true "Main screen")
+![Alt text](/screenshots/screenshot2.png?raw=true "Help menu")
