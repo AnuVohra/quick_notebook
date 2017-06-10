@@ -1,0 +1,7 @@
+#!/bin/bash
+#runs notebook file
+PORT=8003
+java -jar mini-server.jar $PORT
+$SHELL
+#firefox -new-window http://localhost:$PORT/index.html
+#end

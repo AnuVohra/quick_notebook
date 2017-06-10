@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Simple Notebook</title>
+
+    <!-- include libraries(jQuery, bootstrap) -->
+    <link href="dist/bootstrap.css" rel="stylesheet">
+    <script src="dist/jquery.js"></script>
+    <script src="dist/bootstrap.js"></script>
+
+    <!-- include summernote css/js-->
+    <link href="dist/summernote.css" rel="stylesheet">
+    <script src="dist/summernote.js"></script>
+
+    <!--Dexie as indexedDB wrapper-->
+    <script src="dist/dexie.js"></script>
+
+    <!-- custom css-->
+    <link href="dist/style.css" rel="stylesheet">
+
+  </head>
+  <body style="overflow: scroll;">
+
+    <div id="help_menu_cover" class="help_menu_cover">
+      <div class="help_menu_container">
+        <h1 id="help_menu_header" class="background_theme_img">Help</h1>
+        <div class="topics_list">
+          <div class="topic">
+            <h1>Key board shortcuts</h1>
+            <div id="shortcuts_desc_topic" >
+              <table id="shortcuts_desc_table">
+                <tr>
+                  <th>Shortcut</th>
+                  <th>Description</th>
+                </tr>
+                <tr>
+                  <td>F1</td>
+                  <td>Show this help menu.</td>
+                </tr>
+                <tr>
+                  <td>Esc</td>
+                  <td>Hide this help menu</td>
+                </tr>
+				<tr>
+                  <td>Double LeftClick</td>
+                  <td>To edit a post.</td>
+                </tr>
+                <tr>
+                  <td>Ctrl+Shift+Enter</td>
+                  <td>To add note/task from the input box.</td>
+                </tr>
+				<tr>
+                  <td>Ctrl+LeftClick</td>
+                  <td>To select post/task for deleting them.</td>
+                </tr>
+                <tr>
+                  <td>Del</td>
+                  <td>Use to delete the selected note/task.</td>
+                </tr>
+                <tr>
+                  <td>Ctrl+Shift+z</td>
+                  <td>Toggle visibility of task manager.</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div id="msg_box"></div>
+    <div id="notebook_logo" class="bg_logo">Notebook</div>
+    <div class="toolbox">
+		<div class="tool" title="Help(F1)" onclick="show_help_menu();"><img src="dist/img/help.png" alt="help"></div>
+		<div class="tool" title="Show task manager(ctrl+shift+z)" onclick="toggle_task_manager();"><img src="dist/img/task_manager.png" alt="shows task manager tool"></div>
+      <div class="tool" title="Upload notes to server" onclick="post_data_to_server();"><img src="dist/img/to_top.png" alt="button to post data to server"></div>
+      <div class="tool" title="export content as JSON" ><a  id="export_to_JSON" onclick="export_to_JSON()"><img src="dist/img/export_file.png" alt="to top"></a></div>
+    </div>
+	<div id="task_manager_container">
+		<div class="bg_logo">Task List-<span id="count_of_tasks">0</span></div>
+		<div id="task_list">
+			<!--<div class="a_task"></div>-->
+		</div>
+		<div id="input_box_task" contenteditable="true" placeholder="Add new task...">
+		</div>
+	</div>
+    <div id="summernote"></div>
+    <div id="notes_post_container">
+      <!-- <div class="a_post"></div> -->
+    </div>
+
+    <script src="dist/jquery.hotkeys.js"></script>
+    <script src="dist/app.js"></script>
+  </body>
+</html>
