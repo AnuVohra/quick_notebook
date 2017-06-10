@@ -18,3 +18,6 @@ CODE strcuture explained for the developer.
 2. Dexie JS for indexed BD handling.
 3. Jquery for the JS and DOM modification.
 4. HTML and CSS for styling.
+
+
+![Alt text](/screenshots/screenshot1.png?raw=true "Optional Title")
